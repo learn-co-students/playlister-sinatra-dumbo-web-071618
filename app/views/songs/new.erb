@@ -8,14 +8,14 @@
 
   <div class="artist-name">
     <label for="Artist">Artist:</label>
-    <input type="text" id="Artist" name="song[artist]">
+    <input type="text" id="Artist Name" name="[artist][name]">
   </div>
 
   <div class="genres">
     <label for="Genres"></label>
     <% @genres.each_with_index do |genre, idx| %>
       <label for="genre<%= idx %>">
-        <input type="checkbox" name="song[genres][<%= idx %>]" value="<%= genre.slug %>">
+        <input type="checkbox" name="[genres][<%= idx %>][name]" value="<%= genre.name %>">
         <%= genre.name %>
       </label>
       <br>
@@ -25,5 +25,5 @@
 
 
 
-  <input type="submit">
+  <input type="submit" value="Create">
 </form>
