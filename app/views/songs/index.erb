@@ -1,0 +1,8 @@
+<div class="songs-index">
+  <h1>Songs</h1>
+  <ul class="songs-list">
+  <% @songs.each do |song| %>
+    <li class="songs-item"><a href="/songs/<%= song.slug %>"><%= song.name %></a></li>
+  <% end %>
+  </ul>
+</div>
